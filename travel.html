@@ -2,87 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Travel Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore World - Travel Website</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-    header, footer { background: #f4f4f4; padding: 10px; text-align: center; }
-    section { margin-bottom: 30px; }
-    aside { background: #eaeaea; padding: 10px; margin-top: 20px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    table, th, td { border: 1px solid #ccc; }
-    th, td { padding: 8px; text-align: left; }
-    img { max-width: 100%; height: auto; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-image: url('https://images.pexels.com/photos/731217/pexels-photo-731217.jpeg?cs=srgb&dl=pexels-wanderer-731217.jpg&fm=jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 250px;
+    }
+    h1 {
+      color: aliceblue;
+      text-shadow: 12px 3px 15px aqua;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 50px;
+      text-align: center;
+      padding: 10px;
+    }
+    .p-header {
+      color: rgb(20, 163, 219);
+      text-shadow: 12px 3px 15px aqua;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 40px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+    }
+    nav a {
+      margin: 0 5px;
+    }
+    button {
+      background-color: teal;
+      color: white;
+      border-radius: 2px;
+      height: 36px;
+      width: 105px;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darkcyan;
+      transform: scale(1.05);
+    }
+    .destination-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+    }
+    .destination-card {
+      width: 300px;
+      height: 300px;
+      border: 10px solid rgb(79, 82, 82);
+      border-radius: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 3px 3px 4px;
+      position: relative;
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .destination-card h3 {
+      text-align: center;
+      font-family: Lucida Sans;
+      font-style: italic;
+    }
+    .destination-card p {
+      font-family: Lucida Sans;
+      text-align: center;
+    }
+    .destination-card .btn-wrapper {
+      text-align: center;
+      margin-top: 10px;
+    }
+    #contact {
+      text-align: center;
+      padding: 40px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Explore World</h1>
+    <p class="p-header">Your guide to unforgettable travel experiences</p>
+    <nav>
+      <a href="#destinations"><button>DESTINATIONS</button></a>
+      <a href="#packages"><button>PACKAGES</button></a>
+      <a href="#contact"><button>CONTACT</button></a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Travel Explorer</h1>
-  <p>Your guide to amazing travel destinations</p>
-</header>
+  <section id="destinations" class="destination-section">
+    <div class="destination-card" style="background-image: url('https://www.usnews.com/object/image/00000163-8d5b-d398-ad7f-8dfff5760000/3-eiffel-tower-getty.jpg?update-time=1739553789196&size=responsive970');">
+      <h3>Paris</h3>
+      <p>The Eiffel Tower can be appreciated at a distance by all Paris visitors, but for a unique experience, consider booking a tour.</p>
+      <div class="btn-wrapper">
+        <button>Book Your Trip</button>
+      </div>
+    </div>
 
-<section>
-  <h2>Top Travel Destinations</h2>
-  <ul>
-    <li>Paris, France</li>
-    <li>Kyoto, Japan</li>
-    <li>New York City, USA</li>
-    <li>Rome, Italy</li>
-    <li>Cape Town, South Africa</li>
-  </ul>
-</section>
+    <div class="destination-card" style="background-image: url('https://www.usnews.com/object/image/00000195-0240-db6b-afd7-0a7a1af70000/sheikh-zayed-mosque-credit-getty-images.jpg?update-time=1739554097840&size=responsive970');">
+      <h3>Sheikh Zayed Grand Mosque</h3>
+      <p>The Sheikh Zayed Grand Mosque is the most popular tourist attraction in Abu Dhabi, with millions of visitors per year.</p>
+      <div class="btn-wrapper">
+        <button>Book Your Trip</button>
+      </div>
+    </div>
 
-<section>
-  <h2>Featured Article</h2>
-  <article>
-    <h3>Exploring Kyoto</h3>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Kiyomizu-dera_in_Kyoto.jpg" alt="Kiyomizu-dera in Kyoto">
-    <p>Kyoto, once the capital of Japan, is a city on the island of Honshu. It’s famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
-  </article>
-</section>
+    <div class="destination-card" style="background-image: url('https://www.usnews.com/object/image/00000163-8d5c-d398-ad7f-8dfc47fe0000/13-burj-khalifa-getty.jpg?update-time=1739893923720&size=responsive970');">
+      <h3>Dubai</h3>
+      <p>Visit the Burj Khalifa and experience the tallest building in the world. A must-see in your travel bucket list!</p>
+      <div class="btn-wrapper">
+        <button>Book Your Trip</button>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>Travel Budget Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Destination</th>
-        <th>Estimated Cost</th>
-        <th>Best Travel Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Paris</td>
-        <td>$2,500</td>
-        <td>April - June</td>
-      </tr>
-      <tr>
-        <td>Kyoto</td>
-        <td>$2,000</td>
-        <td>March - May</td>
-      </tr>
-      <tr>
-        <td>Rome</td>
-        <td>$2,300</td>
-        <td>April - June</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@exploreworld.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
 
-<aside>
-  <h3>Travel Tips</h3>
-  <ul>
-    <li>Always carry a power bank.</li>
-    <li>Learn basic local phrases.</li>
-    <li>Keep digital copies of important documents.</li>
-  </ul>
-</aside>
-
-<footer>
-  <p>&copy; 2025 Travel Explorer. All rights reserved.</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Explore World. All rights reserved.</p>
+  </footer>
 </body>
 </html>
